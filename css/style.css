@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue:         #00b4ff;
+    --cadetblue:    #7dafd7;
+    --namekblue:    #00adf5;
+    --teal:         #3ECF8E;
+    --namekteal:    #30c381;
+    --white:        #fff;
+    --transwhite:   rgba(255,255,255,0.8);
+    --dark:         #47495a;
+    --darkblue:     #6b7c93;
+    --oceanblue:    #1a65b4;
+    --blackjack:    #333;
+
+    --gutter:       30px;
+    --border-radius: 4px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--darkblue);
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+/*=========== utility class ===========*/
+
+.filter-white {
+    filter: brightness(0) invert(1);
+}
+
+.filter-transition {
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transition: 0.2s all ease;
+}
+
+.filter-transition:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.06);
+}
+
+/*=========== layout ===========*/
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 calc(var(--gutter) / 2);
+}
+
+.row {
+    margin: 0 calc(var(--gutter) / -2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class^="col-"] {
+    width: 100%;
+    padding: 0 calc(var(--gutter) / 2);
+}
+
+.col {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.row > .col {
+    flex: 1;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .col-sm-4 {
+        width: calc(100% / 3);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .col-xl-2 {
+        width: calc(100% / 6);
+    }
+
+    .col-xl-4 {
+        width: calc(100% / 3);
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+}
