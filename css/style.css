@@ -11,21 +11,28 @@
     --teal:         #3ECF8E;
     --namekteal:    #30c381;
     --white:        #fff;
-    --transwhite:   rgba(255,255,255,0.8);
     --dark:         #47495a;
-    --darkblue:     #6b7c93;
+    --darkblue:     #98a0aa;
+    --darkmono:     #5d6077;
+    --darkmojo:     #6b7c93;
     --oceanblue:    #1a65b4;
     --blackjack:    #333;
+    --gray:         #e0e0e0;
 
     --gutter:       30px;
     --border-radius: 4px;
+    --card-border-radius: 6px;
+
+    --z-index-header: 999;
+    --z-index-pricing: 99;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--darkblue);
+    color: var(--darkmojo);
+    position: relative;
 }
 
 a, a:hover, a:active {
@@ -36,9 +43,19 @@ ul {
     list-style-type: none;
 }
 
+button {
+    border: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
     font-weight: 700;
+    color: var(--dark);
 }
 
 /*=========== utility class ===========*/
@@ -56,10 +73,6 @@ h1, h2, h3, h4, h5, h6 {
 .filter-transition:hover {
     filter: grayscale(0);
     opacity: 1;
-}
-
-.box-shadow {
-    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.06);
 }
 
 /*=========== layout ===========*/
@@ -89,6 +102,299 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
 }
 
+/*=========== buttons ===========*/
+.btn {
+    display: inline-block;
+    border-radius: var(--border-radius);
+    padding: 12px 40px;
+    transition: 0.2s all ease-in;
+    font-family: "Open Sans";
+    font-size: 0.8rem;
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn--blue {
+    background-color: var(--blue);
+}
+
+.btn--blue:hover {
+    background-color: var(--namekblue);
+}
+
+.btn--teal {
+    background-color: var(--teal);
+}
+
+.btn--teal:hover {
+    background-color: var(--namekteal);
+}
+
+/*=========== header ===========*/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-index-header);
+    background-color: var(--white);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.04);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.navbar__brand img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: auto;
+}
+
+.navbar__toggler {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    align-self: center;
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 34px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+}
+
+.navbar__toggler:focus ~ .navbar__collapse {
+    display: flex;
+}
+
+.navbar__toggler span {
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--dark);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar__toggler span::before,
+.navbar__toggler span::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: var(--dark);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar__toggler span::before {
+    top: 8px;
+}
+
+.navbar__toggler span::after {
+    bottom: 8px;
+}
+
+.navbar__toggler.active span {
+    transform: rotate(45deg);
+}
+
+.navbar__collapse {
+    display: none;
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+.nav-link {
+    font-weight: bold;
+    color: var(--darkmono);
+    display: block;
+    padding: 0.5rem 0;
+}
+
+/*=========== #hero-content ===========*/
+
+#hero-content {
+    position: relative;
+    height: 800px;
+    background: linear-gradient(to right bottom, #131c47, #192152, #474c9a, #ac93d2);
+    overflow: hidden;
+    text-align: center;
+    color: var(--white);
+}
+
+#hero-content h1 {
+    margin-top: 120px;
+    font-size: 1.75rem;
+    line-height: 1.15;
+    color: var(--white);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#hero-content a i {
+    margin-left: 0.5rem;
+}
+
+#hero-content img {
+    max-width: 180%;
+    transform: translate(-25%, 5%);
+}
+
+/*=========== #pricing ===========*/
+#pricing {
+    position: relative;
+    background: linear-gradient(-180deg, #f2f7fb 60%, #FFFFFF 100%);
+    z-index: var(--z-index-pricing);
+}
+
+.pricing-card {
+    background-color: var(--white);
+    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.06);
+    border-radius: var(--card-border-radius);
+    padding: 40px 30px;
+    text-align: center;
+    transform: scale(1);
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+#pricing .col-lg-4:first-child .pricing-card {
+    margin-top: -100px;
+}
+
+.pricing-card h5 {
+    color: var(--dark);
+}
+
+.pricing-card__header::after {
+    content: "";
+    display: block;
+    max-width: 50%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--gray);
+}
+
+.pricing-value {
+    font-family: "Montserrat";
+    color: var(--dark);
+}
+
+.pricing-currency {
+    font-size: 1.15rem;
+    display: inline-block;
+    transform: translateY(-30px);
+}
+
+.pricing-cost {
+    font-size: 3.75rem;
+}
+
+.pricing-period {
+    opacity: 0.6;
+    font-size: 1.15rem;
+    font-weight: normal;
+}
+
+.pricing-card__footer p {
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.pricing-card__footer a {
+    margin-top: 1.5rem;
+    width: 75%;
+}
+
+.card-ribbon {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-ribbon span {
+    position: absolute;
+    top: 24px;
+    right: -28px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 28px;
+    width: 130px;
+    display: block;
+    transform: rotate(45deg);
+    background: linear-gradient(var(--teal) 0%, var(--teal) 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-ribbon span::before,
+.card-ribbon span::after {
+    position: absolute;
+    top: 100%;
+    border: 3px solid transparent;
+    content: "";
+    z-index: -1;
+}
+
+.card-ribbon span::before {
+    left: 0;
+    border-left-color: var(--teal);
+    border-top-color: var(--teal);
+}
+
+.card-ribbon span::after {
+    right: 0;
+    border-right-color: var(--teal);
+    border-top-color: var(--teal);
+}
+
+.pricing-features {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing-features li::before {
+    font-family: "iconsmind";
+    content: "\ee1e";
+    color: var(--teal);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.pricing-features li {
+    margin-top: 1.25rem;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -97,11 +403,33 @@ h1, h2, h3, h4, h5, h6 {
     .col-sm-4 {
         width: calc(100% / 3);
     }
+
+    #hero-content img {
+        max-width: 180%;
+        transform: translate(-25%, 5%);
+    }
+
+    .pricing-features {
+        flex-direction: row;
+    }
+
+    .pricing-features li {
+        width: 50%;
+    }
 }
 
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+    }
+
+    #hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    #hero-content img {
+        max-width: 180%;
+        transform: translate(-25%, 5%);
     }
 }
 
@@ -110,6 +438,30 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 960px;
     }
 
+    .col-lg-4 {
+        width: calc(100% / 3);
+    }
+
+    #hero-content {
+        height: 1000px;
+    }
+
+    #hero-content img {
+        max-width: 80%;
+        transform: translateY(4%);
+    }
+
+    .pricing-card, #pricing .col-lg-4:first-child .pricing-card {
+        margin-top: -50%;
+    }
+
+    .pricing-card--highlighted {
+        transform: scale(1.1);
+    }
+
+    .pricing-features li {
+        width: 25%;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -127,5 +479,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .col-xl-6 {
         width: 50%;
+    }
+
+    .pricing-features li {
+        width: 20%;
     }
 }
