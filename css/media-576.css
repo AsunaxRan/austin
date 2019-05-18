@@ -1,0 +1,25 @@
+@media (min-width: 576px) {
+    /*=========== utility class ===========*/
+    
+    /*=========== layout ===========*/
+    .container {
+        max-width: 540px;
+    }
+
+    .col-sm-4 {
+        width: calc(100% / 3);
+    }
+
+    #hero-content img {
+        max-width: 180%;
+        transform: translate(-25%, 5%);
+    }
+
+    .pricing-features {
+        flex-direction: row;
+    }
+
+    .pricing-features li {
+        width: 50%;
+    }
+}

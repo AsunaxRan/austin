@@ -1,0 +1,45 @@
+@media (min-width: 1200px) {
+    /*=========== utility class ===========*/
+    .control {
+        margin-bottom: 100px;
+    }
+
+    .section--padding__top {
+        padding-top: 120px;
+    }
+
+    .section--padding__bottom {
+        padding-bottom: 120px;
+    }
+
+    /*=========== layout ===========*/
+    .container {
+        max-width: 1140px;
+    }
+
+    .col-xl-2 {
+        width: calc(100% / 6);
+    }
+
+    .col-xl-4 {
+        width: calc(100% / 3);
+    }
+
+    .col-xl-6 {
+        width: 50%;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .lead {
+        font-size: 1.4rem;
+    }
+
+    /*=========== .section ===========*/
+    .pricing-features li {
+        width: 20%;
+    }
+}

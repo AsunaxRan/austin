@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/iconsmind.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-576.css">
+    <link rel="stylesheet" href="css/media-768.css">
+    <link rel="stylesheet" href="css/media-992.css">
+    <link rel="stylesheet" href="css/media-1200.css">
 </head>
 <body>
     <header>
@@ -24,6 +28,9 @@
                 <div class="navbar__collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link" href="#pricing">HOME</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#pricing">PRICING</a>
                         </li>
                         <li class="nav-item">
@@ -35,19 +42,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#promo">PROMO</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-link--rounded" href="#footer">BUY NOW</a>
-                        </li>
                     </ul>
+                    <a class="nav-action" href="#footer">BUY NOW</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section id="hero-content">
+    <section id="hero-content" class="section--gradient__sapphire">
         <div class="container">
-            <h1>The Fastest & Simplest VPN. Gain Secure Internet.</h1>
-            <p>Surf internet Anonymously</p>
+            <h1 class="control">The Fastest & Simplest VPN. Gain Secure Internet.</h1>
+            <p class="lead">Surf internet Anonymously</p>
             <a href="#" class="btn btn--teal">
                 HOW IT WORKS
                 <i class="icon-Right"></i>
@@ -56,7 +61,7 @@
         <img src="imgs/hero-illustration-4.png" alt="hero-illustration">
     </section>
 
-    <section id="pricing">
+    <section id="pricing" class="section--padding__bottom section--gradient__silver">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -124,69 +129,265 @@
         </div>
     </section>
 
-    <section id="integrations">
-        <h3>Integrations</h3>
-        <p>Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
-        <ul class="tab-list">
-            <li>
-                <a href="#">
-                    <span>Favourite Sitcoms</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>Customizations</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>Best Engineers</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>Wherever you Want</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>Many Devices</span>
-                </a>
-            </li> 
-        </ul>
-        <div class="tab-content">
-            <div class="tab-panel" id="">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h4>What is a hamburger menu mmm, exactly like that, but different yet make it look like Apple.</h4>
-                    </div>
-                    <div class="col-lg-6">
-                        <p class="lead"></p>
-                        <p>Use these icons license for any commercial or personal project including templates, web design, advertising,
-                        applications, themes for sale, gaming, print, logo and software. All the icon packs come with extended license that
-                        covers a whole company users.</p>
-                        <p>If for any reason you want your money back. All icons equipped keywords for easy searching.</p>
+    <section id="tour" class="section--padding__bottom">
+        <div class="container">
+            <div class="control text-center">
+                <h3 class="title">Integrations</h3>
+                <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
+            </div>
+            <ul class="tab-list">
+                <li class="active">
+                    <a href="#">
+                        <i class="icon-Video-Photographer"></i> 
+                        <span>Favourite Sitcoms</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-Gears"></i>
+                        <span>Customizations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-Neutron"></i>
+                        <span>Best Engineers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-Globe"></i>
+                        <span>Wherever you Want</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-Monitor-phone"></i>
+                        <span>Many Devices</span>
+                    </a>
+                </li> 
+            </ul>
+            <div class="tab-content">
+                <div class="tab-panel show">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4>What is a hamburger menu mmm, exactly like that, but different yet make it look like Apple.</h4>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="lead">Make sure to include in your wheelhouse i also believe it's important for every member to be involved and invested in
+                            our company.</p>
+                            <p>Use these icons license for any commercial or personal project including templates, web design, advertising,
+                            applications, themes for sale, gaming, print, logo and software. All the icon packs come with extended license that
+                            covers a whole company users.</p>
+                            <p>If for any reason you want your money back. All icons equipped keywords for easy searching.</p>
+                        </div>
                     </div>
                 </div>
+                <div class="tab-panel"></div>
+                <div class="tab-panel"></div>
+                <div class="tab-panel"></div>
+                <div class="tab-panel"></div>
             </div>
-            <div class="tab-panel" id=""></div>
-            <div class="tab-panel" id=""></div>
-            <div class="tab-panel" id=""></div>
-            <div class="tab-panel" id=""></div>
         </div>
     </section>
 
-    <section id="features"></section>
+    <section id="services" class="section--gradient__ruby">
+        <div class="container">
+            <div class="control text-center">
+                <h3 class="text-white">Compare Best VPN</h3>
+                <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we
+                    gain traction.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card-feature">
+                        <i class="icon-University"></i>
+                        <h4>For Companies</h4>
+                        <ul>
+                            <li>Communicate securely</li>
+                            <li>Stay in touch with your clients</li>
+                            <li>Time entry and billing</li>
+                            <li>Document Automation</li>
+                            <li>Flexible Payout Schedule</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-feature">
+                        <i class="icon-MaleFemale"></i>
+                        <h4>For Individual Customers</h4>
+                        <ul>
+                            <li>Get your payment via wire transfer</li>
+                            <li>Contact your account manager for more</li>
+                            <li>Legal Departments</li>
+                            <li>5GB of total file storage for the team</li>
+                            <li>$14,50 per month cheaper</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="promo"></section>
+    <section id="app" class="section--padding__top">
+        <div class="container">
+            <div class="control text-center">
+                <h3 class="title">Protect up to 6 devices</h3>
+                <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
+                <a href="#" class="btn btn--teal">
+                    DOWNLOAD APP
+                    <i class="icon-Right"></i>
+                </a>
+            </div>
+            <div class="text-center">
+                <img src="imgs/devices.png" alt="devices">
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature-item">
+                        <i class="icon-CPU"></i>
+                        <div class="right">
+                            <h5>100% Intel Cores</h5>
+                            <p>Diversify kpis gain traction, so anti-pattern and get all your ducks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-item">
+                        <i class="icon-Billing"></i>
+                        <div class="right">
+                            <h5>No long term contracts</h5>
+                            <p>Shoot me an email we've got to manage that low hanging fruit that jerk.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-item">
+                        <i class="icon-Atom"></i>
+                        <div class="right">
+                            <h5>Powerful API</h5>
+                            <p>Powerpoint Bunny we need distributors to evangelize the new line to local markets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-item">
+                        <i class="icon-Restore-Window"></i>
+                        <div class="right">
+                            <h5>If something happens</h5>
+                            <p>We need more paper drill down, yet t-shaped individual nor are we in agreeance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-item">
+                        <i class="icon-Data-Lock"></i>
+                        <div class="right">
+                            <h5>Root administrator access</h5>
+                            <p>Dog and pony show your work on this project has been really impactful quick win.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-item">
+                        <i class="icon-Target"></i>
+                        <div class="right">
+                            <h5>Infinite OS combinations</h5>
+                            <p>Time to open the kimono I have zero cycles for this. Where do we stand on the latest client ask.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h3 class="title">How it Works</h3>
+            <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
+            <div class="about-player">
+                <div class="about-player__icon"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h3 class="title">Frequently Asked Questions</h3>
+            <p class="lead">Demonstrating core competencies to in turn innovate. Create stakeholder engagement so that we gain traction.</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5>Out of the loop ramp up customer centric?</h5>
+                    <p>I realized she was just office pretty curate. After I ran into Helen at a restaurant, I realized she was just office
+                    pretty t-shaped individual become creative.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Programmatically gain traction?</h5>
+                    <p>Bob called an all-hands this afternoon to be inspired is to become creative, innovative and energized we want this
+                    philosophy to trickle down to all our stakeholders.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Bake it in can I just chime in on that?</h5>
+                    <p>We need to harvest synergy effects we need more paper who's responsible for the ask for this request?. Strategic fit
+                    ladder up / ladder back to the strategy nor reach out.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Out of the loop ramp up customer centric?</h5>
+                    <p>Out of the loop ramp up customer centric, so quick-win baseline screw the pooch, or player-coach. Tbrand terrorists
+                    message the initiative.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Programmatically gain traction?</h5>
+                    <p>Old boys club drill down, after I ran into Helen at a restaurant, I realized she was just office pretty curate. After I
+                    ran into Helen at a restaurant, I realized she was just office pretty.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Can we try some other colours?</h5>
+                    <p>Race without a finish line run it up the flagpole open door policy mobile friendly. Old boys club drill down, after I
+                    ran into Helen at a restaurant realized.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <div class="container">
+            <h4>Trusted by 3000+ Companies</h4>
+            <div class="row">
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <img src="imgs/clients/product-hunt.svg" alt="product hunt">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <img src="imgs/clients/buzzfeed.svg" alt="buzz feed">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <img src="imgs/clients/bbc.svg" alt="bbc">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <img src="imgs/clients/the-guardian.svg" alt="the gủadian">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <img src="imgs/clients/the-verge.svg" alt="the verge">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <img src="imgs/clients/yahoo-tech.svg" alt="yahoo tech">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="footer">
-        <h3>Sign-up today and recieve our founders bonus</h3>
+        <h3 class="title">Sign-up today and recieve our founders bonus</h3>
         <form action="">
             <input type="text" placeholder="Your Name">
             <input type="email" placeholder="Your Email">
             <input type="password" placeholder="Your Password">
-            <button>CREATE A FREE ACOUNT</button>
+            <button class="btn btn--teal">CREATE A FREE ACOUNT</button>
         </form>
         <p>This offer's just for new Austin users.</p>
         <p>By clicking "CREATE A FREE ACCOUNT," you agree to <a href="#">Austin's Terms of Service.</a></p>

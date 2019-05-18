@@ -1,0 +1,168 @@
+@media (min-width: 992px) {
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    /*=========== utility class ===========*/
+    .control {
+        margin-bottom: 80px;
+    }
+
+    .section--padding__top {
+        padding-top: 100px;
+    }
+
+    .section--padding__bottom {
+        padding-bottom: 100px;
+    }
+
+    /*=========== layout ===========*/
+    .container {
+        max-width: 960px;
+    }
+
+    .col-lg-4 {
+        width: calc(100% / 3);
+    }
+
+    .col-lg-6 {
+        width: calc(100% / 2);
+    }
+
+    header {
+        background-color: transparent;
+    }
+
+    .navbar__brand {
+        align-self: center;
+    }
+
+    .navbar__brand img {
+        filter: brightness(0) invert(1);
+    }
+
+    .navbar__toggler {
+        display: none;
+    }
+
+    .navbar__collapse {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-item {
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .nav-item::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: var(--blue);
+        transition: 0.2s width ease;
+    }
+
+    .nav-link {
+        color: var(--white);
+        padding-top: 15px;
+        padding-bottom: 20px;
+        transition: 0.2s color ease;
+    }
+
+    .nav-item:hover::before {
+        width: 20px;
+    }
+
+    .nav-item:hover .nav-link {
+        color: var(--blue);
+    }
+
+    .nav-action {
+        margin-left: auto;
+        margin-top: 0;
+        align-self: center;
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.85);
+        transition: 0.2s all ease;
+    }
+
+    .nav-action:hover {
+        background-color: var(--white);
+        color: var(--blue);
+    }
+
+    #hero-content {
+        height: 1000px;
+        padding-top: 160px;
+    }
+
+    #hero-content h1 {
+        line-height: 1.15;
+    }
+
+    #hero-content img {
+        max-width: 80%;
+        transform: translateY(4%);
+    }
+
+    .pricing-card,
+    #pricing .col-lg-4:first-child .pricing-card {
+        margin-top: -50%;
+    }
+
+    .pricing-card--highlighted {
+        transform: scale(1.1);
+    }
+
+    .pricing-features li {
+        width: 25%;
+    }
+
+    .tab-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tab-list li {
+        flex: 1;
+    }
+
+    .tab-list a {
+        padding-bottom: 40px;
+    }
+
+    .tab-list i {
+        display: inline-block;
+        font-size: 3.5rem;
+    }
+
+    .tab-list span {
+        display: block;
+        margin-top: 25px;
+    }
+
+    .tab-content {
+        margin-top: 80px;
+    }
+
+    #services .row .col-lg-6:first-child .card-feature {
+        margin-bottom: 0;
+    }
+}
