@@ -8,6 +8,10 @@
         font-size: 1.4rem;
     }
 
+    h5 {
+        font-size: 1rem;
+    }
+
     /*=========== utility class ===========*/
     .control {
         margin-bottom: 80px;
@@ -26,12 +30,20 @@
         max-width: 960px;
     }
 
+    .col-lg-2 {
+        width: calc(100% / 6);
+    }
+
     .col-lg-4 {
         width: calc(100% / 3);
     }
 
     .col-lg-6 {
         width: calc(100% / 2);
+    }
+
+    .col-lg-10 {
+        width: calc(100% * 5 / 6);
     }
 
     header {
@@ -164,5 +176,10 @@
 
     #services .row .col-lg-6:first-child .card-feature {
         margin-bottom: 0;
+    }
+
+    /*=========== #features ===========*/
+    .feature-item i {
+        font-size: 2.8rem;
     }
 }
