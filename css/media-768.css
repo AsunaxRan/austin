@@ -18,6 +18,14 @@
         padding-bottom: 80px;
     }
 
+    .mt-40 {
+        margin-top: 60px;
+    }
+
+    .mb-40 {
+        margin-bottom: 60px;
+    }
+
     /*=========== layout ===========*/
     .container {
         max-width: 720px;
