@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,6 +35,8 @@
 
     --z-index-header: 999;
     --z-index-pricing: 99;
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -584,7 +586,7 @@ header {
 .card-feature {
     padding: 30px;
     background: var(--white);
-    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.06);
+    box-shadow: 0 4px 9px 0 rgba(23, 28, 33, 0.15);
     border-radius: 6px;
 }
 
